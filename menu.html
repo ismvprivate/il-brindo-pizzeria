@@ -918,6 +918,7 @@ Il dolce piemontese per eccellenza — cacao, amaretti, rum, uova. Una cosa seri
     hamburger.addEventListener('click', () => hamburger.classList.contains('open') ? closeMenu() : openMenu());
     backdrop.addEventListener('click', closeMenu);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
     // Sticky category nav active state
     const sections = document.querySelectorAll('.menu-section[id]');

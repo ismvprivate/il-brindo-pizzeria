@@ -205,15 +205,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(var(--font-size-4xl), 7vw, 96px);
+  font-size: clamp(36px, 7vw, 96px);
 }
 
 h2 {
-  font-size: clamp(var(--font-size-3xl), 4vw, var(--font-size-4xl));
+  font-size: clamp(28px, 4vw, var(--font-size-4xl));
 }
 
 h3 {
-  font-size: clamp(var(--font-size-2xl), 3vw, 42px);
+  font-size: clamp(22px, 3vw, 42px);
 }
 
 h4 {
@@ -1450,7 +1450,7 @@ footer {
 
   .hero-content { max-width: 100%; }
 
-  .hero-sub { max-width: 100%; }
+  .hero-sub { max-width: 100%; font-size: var(--font-size-base); }
 
   .intro-strip { padding-block: var(--space-16); }
 
@@ -1955,7 +1955,7 @@ footer {
 
 .page-hero-content h1 {
   color: var(--color-bone);
-  font-size: clamp(38px, 5vw, 68px);
+  font-size: clamp(30px, 5vw, 68px);
   margin-bottom: var(--space-3);
 }
 
@@ -2092,15 +2092,21 @@ footer {
   width: 100%;
   padding: 13px var(--space-4);
   font-family: var(--font-body);
-  font-size: var(--font-size-base);
+  font-size: 16px;
   color: var(--color-text-primary);
   background: var(--color-bg-primary);
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-md);
   outline: none;
   transition: border-color var(--ease-default), box-shadow var(--ease-default);
-  appearance: none;
   -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input[type="date"].form-input {
+  appearance: auto;
+  -webkit-appearance: auto;
 }
 
 .form-input::placeholder,
@@ -2230,6 +2236,13 @@ footer {
   .prenota-form-card { padding: var(--space-7); }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .prenota-sidebar-row { grid-template-columns: 1fr; gap: var(--space-5); }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 16px;
+    padding: 14px var(--space-4);
+    min-height: 48px;
+  }
 }
 
 @media (max-width: 375px) {

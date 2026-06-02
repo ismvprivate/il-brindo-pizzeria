@@ -265,6 +265,7 @@
     hamburger.addEventListener('click', () => hamburger.classList.contains('open') ? closeMenu() : openMenu());
     backdrop.addEventListener('click', closeMenu);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
     // ----------------------------------------------------------------
     // Date logic — only allow open days; enforce 6pm cutoff for today

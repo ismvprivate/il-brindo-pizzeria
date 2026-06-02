@@ -263,6 +263,7 @@
     hamburger.addEventListener('click', () => hamburger.classList.contains('open') ? closeMenu() : openMenu());
     backdrop.addEventListener('click', closeMenu);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
     const revealEls = document.querySelectorAll('.reveal');
     const observer  = new IntersectionObserver(entries => {
