@@ -3,9 +3,9 @@
 // Set these in Netlify: Site Settings > Environment Variables.
 // For local testing, create a .env file (see .env.example).
 // ============================================================
-const RESTAURANT_NAME      = process.env.RESTAURANT_NAME || "Il Brindo Pizzeria";
-const OWNER_WHATSAPP       = process.env.OWNER_WHATSAPP;       // set in Netlify env vars
-const CALLMEBOT_API_KEY    = process.env.CALLMEBOT_API_KEY;    // from Callmebot bot
+const RESTAURANT_NAME      = "Il Brindo Pizzeria";
+const OWNER_WHATSAPP       = process.env.CALLMEBOT_PHONE;      // set in Netlify env vars
+const CALLMEBOT_API_KEY    = process.env.CALLMEBOT_API_KEY;    // set in Netlify env vars
 const LARGE_GROUP_THRESHOLD = 8;               // Guests >= this trigger the large-group warning
 const CUTOFF_HOUR          = 18;               // After this hour (Italy time) today is not bookable
 const OPEN_DAYS            = [5, 6, 0, 1];    // 5=Fri, 6=Sat, 0=Sun, 1=Mon

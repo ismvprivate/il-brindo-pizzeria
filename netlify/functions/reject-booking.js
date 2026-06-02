@@ -3,8 +3,8 @@
 // Set these in Netlify: Site Settings > Environment Variables.
 // For local testing, create a .env file (see .env.example).
 // ============================================================
-const RESTAURANT_NAME     = process.env.RESTAURANT_NAME || "Il Brindo Pizzeria";
-const RESTAURANT_PHONE    = process.env.RESTAURANT_PHONE || "";
+const RESTAURANT_NAME     = "Il Brindo Pizzeria";
+const RESTAURANT_PHONE    = "342 762 3961";
 const EMAILJS_SERVICE_ID  = process.env.EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_REJECT;
 const EMAILJS_PUBLIC_KEY  = process.env.EMAILJS_PUBLIC_KEY;
