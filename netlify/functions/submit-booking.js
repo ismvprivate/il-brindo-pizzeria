@@ -10,7 +10,7 @@ const LARGE_GROUP_THRESHOLD = 8;               // Guests >= this trigger the lar
 const CUTOFF_HOUR          = 18;               // After this hour (Italy time) today is not bookable
 const OPEN_DAYS            = [5, 6, 0, 1];    // 5=Fri, 6=Sat, 0=Sun, 1=Mon
 // Netlify sets process.env.URL automatically to your site's URL.
-const BASE_URL = process.env.URL || "https://il-brindo.netlify.app";
+const BASE_URL = process.env.URL || "https://ilbrindopizzeria.netlify.app";
 // ============================================================
 
 exports.handler = async (event) => {
