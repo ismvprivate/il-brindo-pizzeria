@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contatti — Il Brindo Pizzeria</title>
+  <meta name="description" content="Come raggiungerci, orari di apertura e modulo di contatto. Il Brindo Pizzeria, Via dei Rivalba 2, Castelnuovo Don Bosco (AT)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/brindo_logo.png" type="image/png" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="main-nav" class="nav--scrolled">
+    <a href="index.html" class="nav-logo"><img src="assets/brindo_logo.png" alt="Il Brindo Pizzeria" /></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="chi-siamo.html">Chi Siamo</a></li>
+      <li><a href="contatti.html" style="color: var(--color-bone);">Contatti</a></li>
+      <li><a href="prenota.html" class="nav-cta">Prenota</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-backdrop" id="nav-backdrop"></div>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="page-hero-bg page-hero-bg--contatti"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow eyebrow--gold">Dove siamo</span>
+      <h1>Vieni a trovarci<br>a Castelnuovo.</h1>
+      <p>A due passi dal centro storico, con parcheggio comodo e il forno già acceso.</p>
+    </div>
+  </header>
+
+  <!-- ====================================================
+       CONTATTI MAIN
+  ==================================================== -->
+  <section class="contatti-section">
+    <div class="container">
+      <div class="contatti-layout">
+
+        <!-- INFO COLUMN -->
+        <div>
+
+          <div class="contatti-info-block reveal">
+            <span class="eyebrow">Indirizzo e contatti</span>
+            <h3>Dove siamo.</h3>
+
+            <div class="contatti-detail">
+              <div class="contatti-detail-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contatti-detail-body">
+                <strong>Indirizzo</strong>
+                <p>Via dei Rivalba 2<br>14022 Castelnuovo Don Bosco (AT)</p>
+              </div>
+            </div>
+
+            <div class="contatti-detail">
+              <div class="contatti-detail-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contatti-detail-body">
+                <strong>Telefono</strong>
+                <p><a href="tel:+393427623961">342 762 3961</a><br><small>Ven–Lun 18:30–22:00</small></p>
+              </div>
+            </div>
+
+            <div class="contatti-detail">
+              <div class="contatti-detail-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <div class="contatti-detail-body">
+                <strong>WhatsApp</strong>
+                <p><a href="https://wa.me/393427623961" target="_blank" rel="noopener">342 762 3961</a><br><small>Scrivici su WhatsApp</small></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- OPENING HOURS -->
+          <div class="contatti-info-block reveal reveal-delay-1">
+            <span class="eyebrow">Quando siamo aperti</span>
+            <h3>Orari.</h3>
+            <table class="hours-table">
+              <tbody>
+                <tr class="closed">
+                  <td>Martedì</td>
+                  <td>Chiuso</td>
+                </tr>
+                <tr class="closed">
+                  <td>Mercoledì</td>
+                  <td>Chiuso</td>
+                </tr>
+                <tr class="closed">
+                  <td>Giovedì</td>
+                  <td>Chiuso</td>
+                </tr>
+                <tr>
+                  <td>Venerdì</td>
+                  <td>18:30–22:00</td>
+                </tr>
+                <tr>
+                  <td>Sabato</td>
+                  <td>18:30–22:00</td>
+                </tr>
+                <tr>
+                  <td>Domenica</td>
+                  <td>18:30–22:00</td>
+                </tr>
+                <tr>
+                  <td>Lunedì</td>
+                  <td>18:30–22:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- MAP -->
+          <div class="contatti-map reveal reveal-delay-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.2667570314725!2d7.960997076646622!3d45.03980836165415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787ddde31d6534b%3A0xcdc59bda7612562f!2sIl%20Brindo%20Pizzeria!5e0!3m2!1sit!2sit!4v1780417435800!5m2!1sit!2sit"
+              title="Mappa Il Brindo Pizzeria, Via dei Rivalba 2 Castelnuovo Don Bosco AT"
+              width="600" height="450" style="border:0;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- HOW TO GET THERE -->
+          <div class="contatti-info-block reveal">
+            <span class="eyebrow">Come raggiungerci</span>
+            <h3>Come arrivare.</h3>
+            <div class="contatti-detail">
+              <div class="contatti-detail-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><path d="m16 8 5 3-5 3V8z"/><path d="M1 16h15"/><path d="M1 20h15"/></svg>
+              </div>
+              <div class="contatti-detail-body">
+                <strong>In auto</strong>
+                <p>Da Chieri: SP2, circa 10 minuti. Da Asti: SP457, circa 20 minuti. Da Torino: 30 minuti via SS589. Parcheggio gratuito in Via Adei Rivalba e in Piazza Italia a 100 metri.</p>
+              </div>
+            </div>
+            <div class="contatti-detail">
+              <div class="contatti-detail-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="4" width="12" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>
+              </div>
+              <div class="contatti-detail-body">
+                <strong>Accessibilità</strong>
+                <p>Ingresso senza barriere architettoniche. Seggioloni disponibili. Posti riservati su richiesta.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="reservation-cta reservation-cta--dark">
+    <div class="container">
+      <span class="eyebrow eyebrow--gold">Ci vediamo</span>
+      <h2>Prenota il tuo posto.</h2>
+      <p>Online in un minuto, o chiamaci al <a href="tel:+393427623961" style="color:inherit; text-decoration:underline;">342 762 3961</a>.</p>
+      <div class="reservation-actions">
+        <a href="prenota.html" class="btn-primary">Prenota online</a>
+        <a href="menu.html" class="btn-ghost-bone">Sfoglia il menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid container">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="assets/brindo_logo.png" alt="Il Brindo Pizzeria" /></div>
+        <p class="footer-tagline">"Fuoco, farina, e qualche<br>sorpresa di troppo."</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/ilbrindo/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/ilbrindopizzeria/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g2531169-d10486386-Reviews-Il_Brindo_Pizzeria-Castelnuovo_Don_Bosco_Province_of_Asti_Piedmont.html" class="social-link" aria-label="TripAdvisor" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Esplora</p>
+        <ul class="footer-links">
+          <li><a href="menu.html">Menu completo</a></li>
+          <li><a href="menu.html#farinata">Farinata</a></li>
+          <li><a href="menu.html#pizze">Pizza al Mattone</a></li>
+          <li><a href="menu.html#pinsa">Pinsa Romana</a></li>
+          <li><a href="menu.html#bbq">American BBQ</a></li>
+          <li><a href="menu.html#dolci">Dolci della casa</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Info</p>
+        <div class="footer-info">
+          <p>
+            <strong>Il Brindo Pizzeria</strong><br>
+            Via dei Rivalba 2<br>
+            14022 Castelnuovo Don Bosco (AT)<br><br>
+            <strong>Tel.</strong> <a href="tel:+393427623961">342 762 3961</a>
+          </p>
+          <div class="footer-hours">
+            <div class="footer-hours-row"><span>Mar – Gio</span><span>Chiuso</span></div>
+            <div class="footer-hours-row"><span>Ven – Lun</span><span>18:30–22:00</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Prenota</p>
+        <ul class="footer-links">
+          <li><a href="prenota.html">Prenota un tavolo</a></li>
+          <li><a href="contatti.html">Contattaci</a></li>
+          <li><a href="chi-siamo.html">Chi siamo</a></li>
+        </ul>
+        <div class="footer-platforms">
+          <p class="footer-platforms-label">Trovaci su</p>
+          <a href="#">TheFork</a>
+          <a href="https://maps.google.com/?q=Via+dei+Rivalba+2,+Castelnuovo+Don+Bosco+AT" target="_blank" rel="noopener">Google Maps</a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g2531169-d10486386-Reviews-Il_Brindo_Pizzeria-Castelnuovo_Don_Bosco_Province_of_Asti_Piedmont.html" target="_blank" rel="noopener">TripAdvisor</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Il Brindo Pizzeria — Tutti i diritti riservati</span>
+      <span>Realizzato da IS Digital Agency</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav       = document.getElementById('main-nav');
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    const backdrop  = document.getElementById('nav-backdrop');
+
+    window.addEventListener('scroll', () =>
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60)
+    );
+    function openMenu() {
+      hamburger.classList.add('open'); navLinks.classList.add('open');
+      backdrop.classList.add('visible'); hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      hamburger.classList.remove('open'); navLinks.classList.remove('open');
+      backdrop.classList.remove('visible'); hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => hamburger.classList.contains('open') ? closeMenu() : openMenu());
+    backdrop.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer  = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px 120px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

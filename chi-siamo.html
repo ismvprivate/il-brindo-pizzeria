@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi Siamo — Il Brindo Pizzeria</title>
+  <meta name="description" content="La storia di Il Brindo Pizzeria: quasi dieci anni di forno a legna, tradizione piemontese e qualche sorpresa a Castelnuovo Don Bosco." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/brindo_logo.png" type="image/png" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="main-nav" class="nav--scrolled">
+    <a href="index.html" class="nav-logo"><img src="assets/brindo_logo.png" alt="Il Brindo Pizzeria" /></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="chi-siamo.html" style="color: var(--color-bone);">Chi Siamo</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+      <li><a href="prenota.html" class="nav-cta">Prenota</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-backdrop" id="nav-backdrop"></div>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="page-hero-bg page-hero-bg--about"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow eyebrow--gold">Dal 2016</span>
+      <h1>Quasi dieci anni di<br>forno acceso.</h1>
+      <p>La storia di un posto che ha deciso di non restare soltanto una pizzeria di paese.</p>
+    </div>
+  </header>
+
+  <!-- ====================================================
+       STORY
+  ==================================================== -->
+  <section class="about-story">
+    <div class="container">
+      <div class="about-story-inner">
+
+        <div class="about-story-text reveal">
+          <span class="eyebrow">La nostra storia</span>
+          <h2>Tutto è cominciato<br>con un forno.</h2>
+          <p>Nel 2016 abbiamo acceso per la prima volta il forno a legna di questo locale. Da allora non l'abbiamo mai spento.</p>
+          <p>Per anni abbiamo fatto due cose, e le abbiamo fatte bene: la pizza — al mattone, con quella crosta che viene solo dal forno a legna, e il tegamino alto e soffice come vuole la tradizione piemontese — e la farinata di ceci, croccante ai bordi e cremosa al cuore, cotta su teglia di rame direttamente nella fiamma. Quello era Il Brindo, e ci bastava.</p>
+          <p>Poi, negli anni, è arrivato l'American BBQ. Non per seguire una moda — ma perché il forno a legna fa cose straordinarie anche con la carne, e ci siamo accorti che valeva la pena esplorarlo. Le costine, il pulled pork, il brisket: lo stesso fuoco, una filosofia diversa.</p>
+          <p>L'ultima novità è del 2025: la pinsa romana. Impasto a lunga lievitazione, leggerissimo, con quella crosta ariosa che non assomiglia a nessun'altra cosa. Siamo arrivati tardi alla pinsa, ma quando ci siamo arrivati l'abbiamo fatta come si deve.</p>
+          <p>Siamo ancora, prima di tutto, una pizzeria. Il resto è quello che succede quando tieni il forno acceso per quasi dieci anni e non smetti di essere curioso.</p>
+        </div>
+
+        <div class="about-story-img reveal reveal-delay-2">
+          <img class="about-story-img-main" src="assets/about-forno.jpg" alt="Il forno a legna di Il Brindo Pizzeria" loading="lazy" />
+          <div class="about-story-img-badge">
+            <strong>~10</strong>
+            <span>anni di attività</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       VALUES
+  ==================================================== -->
+  <section class="about-values">
+    <div class="container">
+      <div class="about-values-header reveal">
+        <span class="eyebrow">La nostra filosofia</span>
+        <h2>Tre parole.</h2>
+        <p>Quella che ti vogliamo trasmettere ogni volta che entri.</p>
+      </div>
+      <div class="about-values-grid">
+
+        <div class="about-value-card reveal">
+          <div class="about-value-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 18.657A8 8 0 0 1 4 12c0-2.5 1.5-5.5 4-7 0 4 1.5 6 3 6.5S14 10 14 10c1 2 0 4-1 5 2-1 3.5-4 3-7 3 2 4 5 1.657 10.657z"/></svg>
+          </div>
+          <h4>Fuoco</h4>
+          <p>Il forno a legna non è un vezzo estetico. È il motivo per cui la pizza ha quella crosta, la farinata quel profumo, i dolci quel calore che dura. Non abbiamo mai considerato di toglierlo.</p>
+        </div>
+
+        <div class="about-value-card reveal reveal-delay-2">
+          <div class="about-value-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h4>Tradizione</h4>
+          <p>Siamo sempre stati in piemonte e lo rivendichiamo. La farinata, il tegamino, il bonet. Il rispetto per quello che c'era prima è la base di tutto quello che facciamo.</p>
+        </div>
+
+        <div class="about-value-card reveal reveal-delay-3">
+          <div class="about-value-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4>Sorpresa</h4>
+          <p>Il BBQ non te lo aspettavi. Le pinse stagionali nemmeno. Cerchiamo di portare qualcosa di inaspettato — non per stupire, ma perché ci piace cucinare cose diverse e curarle con la stessa attenzione.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       GALLERY
+  ==================================================== -->
+  <section class="about-gallery">
+    <div class="container">
+      <div class="about-gallery-header reveal">
+        <span class="eyebrow">Il locale</span>
+        <h2>Il posto.</h2>
+      </div>
+      <div class="about-gallery-grid">
+        <div class="about-gallery-item reveal">
+          <img src="assets/about-sala.jpg" alt="La sala di Il Brindo Pizzeria" loading="lazy" />
+        </div>
+        <div class="about-gallery-item reveal reveal-delay-1">
+          <img src="assets/about-team.jpg" alt="Il team di Il Brindo Pizzeria" loading="lazy" />
+        </div>
+        <div class="about-gallery-item reveal reveal-delay-2">
+          <img src="assets/about-pizza-mani.jpg" alt="Preparazione della pizza a mano" loading="lazy" />
+        </div>
+        <div class="about-gallery-item reveal reveal-delay-1">
+          <img src="assets/about-ingredienti.jpg" alt="Ingredienti freschi della cucina" loading="lazy" />
+        </div>
+        <div class="about-gallery-item reveal reveal-delay-3">
+          <img src="assets/about-dettaglio.jpg" alt="Dettaglio del locale" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       PHILOSOPHY QUOTE
+  ==================================================== -->
+  <section class="about-philosophy">
+    <div class="container">
+      <div class="about-philosophy-inner reveal">
+        <span class="eyebrow eyebrow--gold">La nostra promessa</span>
+        <blockquote>
+          "Prendiamo il cibo sul serio.<br><span>Noi stessi, un po' meno.</span>"
+        </blockquote>
+        <p>Siamo una pizzeria di paese in un paese di collina, a pochi chilometri da Asti. Non cerchiamo di sembrare quello che non siamo. Cuciniamo bene, accogliamo meglio, e usiamo il forno per tutto quello che ha senso cuocere nel forno.</p>
+        <br />
+        <a href="prenota.html" class="btn-primary">Vieni a trovarci</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="reservation-cta">
+    <div class="container">
+      <span class="eyebrow eyebrow--faint">Ci vediamo presto</span>
+      <h2>Il tavolo ti aspetta.</h2>
+      <p>Castelnuovo Don Bosco (AT) — A dieci minuti da Chieri, venti da Asti.</p>
+      <div class="reservation-actions">
+        <a href="prenota.html" class="btn-bone">Prenota un tavolo</a>
+        <a href="menu.html" class="btn-ghost-bone">Scopri il menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid container">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="assets/brindo_logo.png" alt="Il Brindo Pizzeria" /></div>
+        <p class="footer-tagline">"Fuoco, farina, e qualche<br>sorpresa di troppo."</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/ilbrindo/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/ilbrindopizzeria/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g2531169-d10486386-Reviews-Il_Brindo_Pizzeria-Castelnuovo_Don_Bosco_Province_of_Asti_Piedmont.html" class="social-link" aria-label="TripAdvisor" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Esplora</p>
+        <ul class="footer-links">
+          <li><a href="menu.html">Menu completo</a></li>
+          <li><a href="menu.html#farinata">Farinata</a></li>
+          <li><a href="menu.html#pizze">Pizza al Mattone</a></li>
+          <li><a href="menu.html#pinsa">Pinsa Romana</a></li>
+          <li><a href="menu.html#bbq">American BBQ</a></li>
+          <li><a href="menu.html#dolci">Dolci della casa</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Info</p>
+        <div class="footer-info">
+          <p>
+            <strong>Il Brindo Pizzeria</strong><br>
+            Via dei Rivalba 2<br>
+            14022 Castelnuovo Don Bosco (AT)<br><br>
+            <strong>Tel.</strong> <a href="tel:+393427623961">342 762 3961</a>
+          </p>
+          <div class="footer-hours">
+            <div class="footer-hours-row"><span>Mar – Gio</span><span>Chiuso</span></div>
+            <div class="footer-hours-row"><span>Ven – Lun</span><span>18:30–22:00</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Prenota</p>
+        <ul class="footer-links">
+          <li><a href="prenota.html">Prenota un tavolo</a></li>
+          <li><a href="contatti.html">Contattaci</a></li>
+          <li><a href="chi-siamo.html">Chi siamo</a></li>
+        </ul>
+        <div class="footer-platforms">
+          <p class="footer-platforms-label">Trovaci su</p>
+          <a href="#">TheFork</a>
+          <a href="https://maps.google.com/?q=Via+dei+Rivalba+2,+Castelnuovo+Don+Bosco+AT" target="_blank" rel="noopener">Google Maps</a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g2531169-d10486386-Reviews-Il_Brindo_Pizzeria-Castelnuovo_Don_Bosco_Province_of_Asti_Piedmont.html" target="_blank" rel="noopener">TripAdvisor</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Il Brindo Pizzeria — Tutti i diritti riservati</span>
+      <span>Realizzato da IS Digital Agency</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav       = document.getElementById('main-nav');
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    const backdrop  = document.getElementById('nav-backdrop');
+
+    window.addEventListener('scroll', () =>
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60)
+    );
+    function openMenu() {
+      hamburger.classList.add('open'); navLinks.classList.add('open');
+      backdrop.classList.add('visible'); hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      hamburger.classList.remove('open'); navLinks.classList.remove('open');
+      backdrop.classList.remove('visible'); hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => hamburger.classList.contains('open') ? closeMenu() : openMenu());
+    backdrop.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer  = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px 120px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

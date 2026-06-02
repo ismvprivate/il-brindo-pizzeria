@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prenota — Il Brindo Pizzeria</title>
+  <meta name="description" content="Prenota un tavolo al Il Brindo Pizzeria di Castelnuovo Don Bosco. Online in un minuto, o per telefono." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/brindo_logo.png" type="image/png" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="main-nav" class="nav--scrolled">
+    <a href="index.html" class="nav-logo"><img src="assets/brindo_logo.png" alt="Il Brindo Pizzeria" /></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="chi-siamo.html">Chi Siamo</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+      <li><a href="prenota.html" class="nav-cta">Prenota</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-backdrop" id="nav-backdrop"></div>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="page-hero-bg page-hero-bg--prenota"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow eyebrow--gold">Vieni a trovarci</span>
+      <h1>Prenota il tuo<br>tavolo.</h1>
+      <p>Online in un minuto, oppure chiamaci — il risultato è lo stesso: un posto riservato per te.</p>
+    </div>
+  </header>
+
+  <!-- ====================================================
+       PRENOTA
+  ==================================================== -->
+  <div class="prenota-panel active" id="panel-tavolo">
+    <section class="prenota-section">
+      <div class="container">
+        <div class="prenota-layout">
+
+          <!-- FORM -->
+          <div class="prenota-form-card reveal">
+            <h2 class="prenota-form-title">Prenota un tavolo</h2>
+            <p class="prenota-form-subtitle">Confermeremo la prenotazione entro pochi minuti via SMS o telefono.</p>
+
+            <form id="form-tavolo" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="nome">Nome</label>
+                  <input class="form-input" type="text" id="nome" name="nome" placeholder="Mario" autocomplete="given-name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cognome">Cognome</label>
+                  <input class="form-input" type="text" id="cognome" name="cognome" placeholder="Rossi" autocomplete="family-name" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="telefono">Telefono</label>
+                  <input class="form-input" type="tel" id="telefono" name="telefono" placeholder="+39 333 000 0000" autocomplete="tel" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email (opzionale)</label>
+                  <input class="form-input" type="email" id="email" name="email" placeholder="mario@email.it" autocomplete="email" />
+                  <p class="form-note">Se inserisci l'email riceverai la conferma automaticamente.</p>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="data">Data</label>
+                  <input class="form-input" type="date" id="data" name="data" required />
+                  <p class="form-note" id="data-note" style="display:none;color:#C8531A;">Siamo aperti solo venerdì, sabato, domenica e lunedì.</p>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="orario">Orario</label>
+                  <div class="form-select-wrap">
+                    <select class="form-select" id="orario" name="orario" required>
+                      <option value="" disabled selected>Scegli l'orario</option>
+                      <optgroup label="Cena">
+                        <option value="19:15">19:15</option>
+                        <option value="19:30">19:30</option>
+                        <option value="19:45">19:45</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:15">20:15</option>
+                        <option value="20:30">20:30</option>
+                        <option value="20:45">20:45</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:15">21:15</option>
+                        <option value="21:30">21:30</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="coperti">Numero di persone</label>
+                <div class="form-select-wrap">
+                  <select class="form-select" id="coperti" name="coperti" required>
+                    <option value="" disabled selected>Quante persone siete?</option>
+                    <option value="1">1 persona</option>
+                    <option value="2">2 persone</option>
+                    <option value="3">3 persone</option>
+                    <option value="4">4 persone</option>
+                    <option value="5">5 persone</option>
+                    <option value="6">6 persone</option>
+                    <option value="7">7 persone</option>
+                    <option value="8">8 persone</option>
+                    <option value="9">9 persone</option>
+                    <option value="10">10 persone</option>
+                    <option value="11">11 persone</option>
+                    <option value="12">12 o più persone (ti ricontattiamo noi)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="note">Note (opzionale)</label>
+                <textarea class="form-textarea" id="note" name="note" placeholder="Vuoi farci sapere qualcosa?"></textarea>
+                <p class="form-note">Per gruppi numerosi ti ricontatteremo per confermare la disponibilità.</p>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn-primary btn--full">Invia richiesta di prenotazione</button>
+              </div>
+            </form>
+
+            <div class="form-success" id="success-tavolo">
+              <div class="form-success-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h4>Richiesta inviata!</h4>
+              <p>Ti ricontattiamo entro breve per confermare il tuo tavolo. A presto!</p>
+            </div>
+          </div>
+
+          <!-- SIDEBAR -->
+          <aside class="prenota-sidebar">
+            <div class="prenota-sidebar-row">
+              <div class="prenota-info-card">
+                <h4>Orari</h4>
+                <div class="prenota-hours-row closed">
+                  <span>Mar – Gio</span><span>Chiuso</span>
+                </div>
+                <div class="prenota-hours-row">
+                  <span>Ven – Lun</span><span>18:30–22:00</span>
+                </div>
+              </div>
+
+              <div class="prenota-phone-card">
+                <p>Preferisci chiamare direttamente?</p>
+                <a href="tel:+393427623961" class="prenota-phone-number">342 762 3961</a>
+                <p style="font-size:11px; color:rgba(245,240,232,0.6);">Ven–Lun 18:30–22:00</p>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid container">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="assets/brindo_logo.png" alt="Il Brindo Pizzeria" /></div>
+        <p class="footer-tagline">"Fuoco, farina, e qualche<br>sorpresa di troppo."</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/ilbrindo/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/ilbrindopizzeria/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g2531169-d10486386-Reviews-Il_Brindo_Pizzeria-Castelnuovo_Don_Bosco_Province_of_Asti_Piedmont.html" class="social-link" aria-label="TripAdvisor" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Esplora</p>
+        <ul class="footer-links">
+          <li><a href="menu.html">Menu completo</a></li>
+          <li><a href="menu.html#farinata">Farinata</a></li>
+          <li><a href="menu.html#pizze">Pizza al Mattone</a></li>
+          <li><a href="menu.html#pinsa">Pinsa Romana</a></li>
+          <li><a href="menu.html#bbq">American BBQ</a></li>
+          <li><a href="menu.html#dolci">Dolci della casa</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Info</p>
+        <div class="footer-info">
+          <p>
+            <strong>Il Brindo Pizzeria</strong><br>
+            Via dei Rivalba 2<br>
+            14022 Castelnuovo Don Bosco (AT)<br><br>
+            <strong>Tel.</strong> <a href="tel:+393427623961">342 762 3961</a>
+          </p>
+          <div class="footer-hours">
+            <div class="footer-hours-row"><span>Mar – Gio</span><span>Chiuso</span></div>
+            <div class="footer-hours-row"><span>Ven – Lun</span><span>18:30–22:00</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Prenota</p>
+        <ul class="footer-links">
+          <li><a href="prenota.html">Prenota un tavolo</a></li>
+          <li><a href="contatti.html">Contattaci</a></li>
+          <li><a href="chi-siamo.html">Chi siamo</a></li>
+        </ul>
+        <div class="footer-platforms">
+          <p class="footer-platforms-label">Trovaci su</p>
+          <a href="#">TheFork</a>
+          <a href="https://maps.google.com/?q=Via+dei+Rivalba+2,+Castelnuovo+Don+Bosco+AT" target="_blank" rel="noopener">Google Maps</a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g2531169-d10486386-Reviews-Il_Brindo_Pizzeria-Castelnuovo_Don_Bosco_Province_of_Asti_Piedmont.html" target="_blank" rel="noopener">TripAdvisor</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Il Brindo Pizzeria — Tutti i diritti riservati</span>
+      <span>Realizzato da IS Digital Agency</span>
+    </div>
+  </footer>
+
+  <script>
+    // ================================================================
+    // FRONTEND CONFIGURATION — must match submit-booking.js settings
+    // ================================================================
+    const OPEN_DAYS   = [5, 6, 0, 1]; // 5=Ven, 6=Sab, 0=Dom, 1=Lun
+    const CUTOFF_HOUR = 18;            // After this hour today is not bookable
+    // ================================================================
+
+    // --- Navbar ---
+    const nav       = document.getElementById('main-nav');
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    const backdrop  = document.getElementById('nav-backdrop');
+
+    window.addEventListener('scroll', () =>
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60)
+    );
+    function openMenu() {
+      hamburger.classList.add('open'); navLinks.classList.add('open');
+      backdrop.classList.add('visible'); hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      hamburger.classList.remove('open'); navLinks.classList.remove('open');
+      backdrop.classList.remove('visible'); hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => hamburger.classList.contains('open') ? closeMenu() : openMenu());
+    backdrop.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+    // ----------------------------------------------------------------
+    // Date logic — only allow open days; enforce 6pm cutoff for today
+    // ----------------------------------------------------------------
+
+    // Returns today's date string in YYYY-MM-DD, accounting for Italy timezone (UTC+2 summer, UTC+1 winter)
+    function getItalyTodayStr() {
+      const now         = new Date();
+      const offsetMs    = 2 * 60 * 60 * 1000; // CEST — use 1 * 60 * 60 * 1000 in winter (CET)
+      const italyNow    = new Date(now.getTime() + offsetMs - now.getTimezoneOffset() * 60000);
+      return italyNow.toISOString().split('T')[0];
+    }
+
+    // Returns the current hour in Italy (0-23)
+    function getItalyHour() {
+      const now      = new Date();
+      const offsetMs = 2 * 60 * 60 * 1000; // CEST
+      const italy    = new Date(now.getTime() + offsetMs - now.getTimezoneOffset() * 60000);
+      return italy.getUTCHours();
+    }
+
+    // Find the next available open day from a given Date object (inclusive)
+    function nextOpenDay(fromDate) {
+      const d = new Date(fromDate);
+      for (let i = 0; i < 14; i++) {
+        if (OPEN_DAYS.includes(d.getDay())) return d;
+        d.setDate(d.getDate() + 1);
+      }
+      return d;
+    }
+
+    // Set the min date on the date input
+    function initDateInput(inputEl) {
+      const todayStr  = getItalyTodayStr();
+      const todayDate = new Date(todayStr + 'T00:00:00');
+      const hour      = getItalyHour();
+      const todayIsOpen = OPEN_DAYS.includes(todayDate.getDay());
+
+      let firstAvailable;
+      if (todayIsOpen && hour < CUTOFF_HOUR) {
+        firstAvailable = todayDate;
+      } else {
+        // Start looking from tomorrow
+        const tomorrow = new Date(todayDate);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        firstAvailable = nextOpenDay(tomorrow);
+      }
+
+      inputEl.setAttribute('min', firstAvailable.toISOString().split('T')[0]);
+      inputEl.value = ''; // clear any stale value
+    }
+
+    // Validate a chosen date: must be an open day and not today-after-cutoff
+    function validateDate(dateStr) {
+      if (!dateStr) return null;
+      const d     = new Date(dateStr + 'T00:00:00');
+      const today = getItalyTodayStr();
+      const hour  = getItalyHour();
+
+      if (!OPEN_DAYS.includes(d.getDay())) {
+        return 'Siamo aperti solo venerdì, sabato, domenica e lunedì. Scegli un altro giorno.';
+      }
+      if (dateStr === today && hour >= CUTOFF_HOUR) {
+        return 'Le prenotazioni per oggi non sono più accettate dopo le 18:00. Scegli il prossimo giorno disponibile.';
+      }
+      return null; // valid
+    }
+
+    const dataInput = document.getElementById('data');
+    const dataNota  = document.getElementById('data-note');
+
+    initDateInput(dataInput);
+
+    dataInput.addEventListener('change', () => {
+      const err = validateDate(dataInput.value);
+      if (err) {
+        dataNota.textContent = err;
+        dataNota.style.display = 'block';
+        dataInput.value = ''; // clear the invalid choice
+      } else {
+        dataNota.style.display = 'none';
+      }
+    });
+
+    // ----------------------------------------------------------------
+    // Error / loading helpers
+    // ----------------------------------------------------------------
+    function showError(formEl, message) {
+      let el = formEl.querySelector('.form-api-error');
+      if (!el) {
+        el = document.createElement('p');
+        el.className = 'form-api-error';
+        el.style.cssText = 'color:#C8531A;font-size:13px;margin-top:12px;text-align:center;';
+        formEl.querySelector('.form-submit').after(el);
+      }
+      el.textContent = message;
+      el.style.display = 'block';
+    }
+
+    function clearError(formEl) {
+      const el = formEl.querySelector('.form-api-error');
+      if (el) el.style.display = 'none';
+    }
+
+    function setLoading(btn, loading) {
+      btn.disabled    = loading;
+      btn.textContent = loading ? 'Invio in corso…' : 'Invia richiesta di prenotazione';
+    }
+
+    // ----------------------------------------------------------------
+    // Booking form submit — calls submit-booking Netlify Function
+    // ----------------------------------------------------------------
+    const formTavolo = document.getElementById('form-tavolo');
+    const successBox = document.getElementById('success-tavolo');
+
+    formTavolo.addEventListener('submit', async e => {
+      e.preventDefault();
+      clearError(formTavolo);
+
+      const nome     = document.getElementById('nome').value.trim();
+      const cognome  = document.getElementById('cognome').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const email    = document.getElementById('email').value.trim();
+      const data     = document.getElementById('data').value;
+      const orario   = document.getElementById('orario').value;
+      const coperti  = document.getElementById('coperti').value;
+      const note     = document.getElementById('note').value.trim();
+
+      if (!nome || !cognome) return showError(formTavolo, 'Inserisci nome e cognome.');
+      if (!telefono)         return showError(formTavolo, 'Inserisci un numero di telefono.');
+      if (!data)             return showError(formTavolo, 'Scegli una data.');
+      if (!orario)           return showError(formTavolo, 'Scegli un orario.');
+      if (!coperti)          return showError(formTavolo, 'Indica il numero di persone.');
+
+      // Final client-side date check (belt-and-suspenders)
+      const dateErr = validateDate(data);
+      if (dateErr) return showError(formTavolo, dateErr);
+
+      const btn = formTavolo.querySelector('button[type="submit"]');
+      setLoading(btn, true);
+
+      try {
+        const res = await fetch('/.netlify/functions/submit-booking', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({
+            name:      `${nome} ${cognome}`,
+            phone:     telefono,
+            email,
+            date:      data,
+            time_slot: orario,
+            guests:    parseInt(coperti, 10),
+            notes:     note,
+          }),
+        });
+
+        const json = await res.json();
+
+        if (!res.ok) {
+          showError(formTavolo, json.error || 'Si è verificato un errore. Riprova o chiamaci.');
+          return;
+        }
+
+        formTavolo.style.display = 'none';
+        successBox.classList.add('visible');
+
+      } catch (err) {
+        showError(formTavolo, 'Errore di rete. Controlla la connessione e riprova.');
+      } finally {
+        setLoading(btn, false);
+      }
+    });
+
+    // --- Scroll reveal ---
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer  = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px 120px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

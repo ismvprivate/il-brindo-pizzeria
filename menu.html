@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Il Brindo Pizzeria</title>
+  <meta name="description" content="Il menu completo di Il Brindo Pizzeria: Farinata, Le Pizze, Le Speciali, Le Focacce, American BBQ, Dolci e Bevande." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/brindo_logo.png" type="image/png" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="main-nav" class="nav--scrolled">
+    <a href="index.html" class="nav-logo"><img src="assets/brindo_logo.png" alt="Il Brindo Pizzeria" /></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="menu.html" style="color: var(--color-bone);">Menu</a></li>
+      <li><a href="chi-siamo.html">Chi Siamo</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+      <li><a href="prenota.html" class="nav-cta">Prenota</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-backdrop" id="nav-backdrop"></div>
+
+  <!-- PAGE HERO -->
+  <header class="menu-hero">
+    <div class="menu-hero-bg"></div>
+    <div class="container menu-hero-content">
+      <span class="eyebrow eyebrow--gold">Il menu</span>
+      <h1>Quello che<br>portiamo a tavola.</h1>
+      <p>Forno a legna, mozzarella solo Fiordilatte, origano su tutte le pizze. Ogni prodotto scelto dal nostro Mastro Fornaio Roberto.</p>
+    </div>
+  </header>
+
+  <!-- STICKY CATEGORY NAV -->
+  <nav class="menu-cat-nav" aria-label="Categorie menu">
+    <div class="menu-cat-nav-inner">
+      <button class="menu-cat-btn" data-target="farinata"  aria-selected="false">Farinata</button>
+      <button class="menu-cat-btn" data-target="pizze"    aria-selected="false">Le Pizze</button>
+      <button class="menu-cat-btn" data-target="speciali" aria-selected="false">Le Speciali</button>
+      <button class="menu-cat-btn" data-target="focacce"  aria-selected="false">Le Focacce</button>
+      <button class="menu-cat-btn" data-target="pinsa"   aria-selected="false">Pinsa Romana</button>
+      <button class="menu-cat-btn" data-target="bbq"      aria-selected="false">American BBQ</button>
+      <button class="menu-cat-btn" data-target="dolci"    aria-selected="false">Dolci</button>
+      <button class="menu-cat-btn" data-target="bevande"  aria-selected="false">Bevande</button>
+    </div>
+  </nav>
+
+  <!-- ====================================================
+       FARINATA
+  ==================================================== -->
+  <section class="menu-section menu-section--bone" id="farinata">
+    <div class="container">
+      <div class="menu-section-header">
+        <span class="eyebrow">Il nostro orgoglio</span>
+        <h2>Le Farinate</h2>
+        <p class="menu-section-desc">Impasto di ceci, acqua, olio extravergine e sale. Cotta in teglia di rame direttamente nel forno a legna — croccante ai bordi, cremosa al cuore.</p>
+      </div>
+      <div class="menu-forno-note">
+        <span class="menu-forno-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 18.657A8 8 0 0 1 4 12c0-2.5 1.5-5.5 4-7 0 4 1.5 6 3 6.5S14 10 14 10c1 2 0 4-1 5 2-1 3.5-4 3-7 3 2 4 5 1.657 10.657z"/></svg>
+        </span>
+        <p>Cotta nel forno a legna.</p>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Porzione Farinata Classica</div>
+          </div>
+          <div class="menu-item-price">€ 3,00</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Farcita — Cipolle</div>
+            <div class="menu-item-desc">Teglia da 2 porzioni.</div>
+          </div>
+          <div class="menu-item-price">€ 7,00</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Farcita — Salsiccia</div>
+            <div class="menu-item-desc">Teglia da 2 porzioni.</div>
+          </div>
+          <div class="menu-item-price">€ 8,00</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Farcita — 4 Formaggi</div>
+            <div class="menu-item-desc">Teglia da 2 porzioni.</div>
+          </div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       LE PIZZE
+  ==================================================== -->
+  <section class="menu-section menu-section--stone" id="pizze">
+    <div class="container">
+      <div class="menu-section-header">
+        <span class="eyebrow">Tegamino e Mattone</span>
+        <h2>Le Pizze</h2>
+        <p class="menu-section-desc">Disponibili in due versioni: Tegamino (alta, soffice, vecchia scuola) e Mattone (cottura diretta sul mattone del forno a legna, crosta croccante). Mozzarella solo Fiordilatte, origano su ogni pizza.</p>
+      </div>
+      <div class="menu-forno-note">
+        <span class="menu-forno-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 18.657A8 8 0 0 1 4 12c0-2.5 1.5-5.5 4-7 0 4 1.5 6 3 6.5S14 10 14 10c1 2 0 4-1 5 2-1 3.5-4 3-7 3 2 4 5 1.657 10.657z"/></svg>
+        </span>
+        <p>Senza glutine disponibile su richiesta (+2,00). *prodotto surgelato.</p>
+      </div>
+
+      <div class="menu-prices-header">
+        <span></span>
+        <span>Tegamino</span>
+        <span>Mattone</span>
+      </div>
+
+      <div class="menu-items">
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Marinara</div><div class="menu-item-desc">pomodoro, aglio, origano</div></div>
+          <div class="menu-item-price">€ 5,00</div>
+          <div class="menu-item-price">€ 5,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Margherita</div><div class="menu-item-desc">pomodoro, mozzarella</div></div>
+          <div class="menu-item-price">€ 5,50</div>
+          <div class="menu-item-price">€ 6,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Biancaneve</div><div class="menu-item-desc">mozzarella</div></div>
+          <div class="menu-item-price">€ 5,00</div>
+          <div class="menu-item-price">€ 5,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Bufala</div><div class="menu-item-desc">pomodoro, mozzarella, mozzarella di bufala campana</div></div>
+          <div class="menu-item-price">€ 7,50</div>
+          <div class="menu-item-price">€ 8,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Wurstel</div><div class="menu-item-desc">pomodoro, mozzarella, wurstel</div></div>
+          <div class="menu-item-price">€ 6,50</div>
+          <div class="menu-item-price">€ 7,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Greca</div><div class="menu-item-desc">pomodoro, mozzarella, olive</div></div>
+          <div class="menu-item-price">€ 6,50</div>
+          <div class="menu-item-price">€ 7,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Cipolle</div><div class="menu-item-desc">pomodoro, mozzarella, cipolle</div></div>
+          <div class="menu-item-price">€ 6,50</div>
+          <div class="menu-item-price">€ 7,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Funghi</div><div class="menu-item-desc">pomodoro, mozzarella, funghi</div></div>
+          <div class="menu-item-price">€ 6,50</div>
+          <div class="menu-item-price">€ 7,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Prosciutto</div><div class="menu-item-desc">pomodoro, mozzarella, prosc. cotto</div></div>
+          <div class="menu-item-price">€ 7,00</div>
+          <div class="menu-item-price">€ 7,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Bismarck</div><div class="menu-item-desc">pomodoro, mozzarella, prosc. cotto, uovo</div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price">€ 8,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Crudo</div><div class="menu-item-desc">pomodoro, mozzarella, prosc. crudo</div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price">€ 8,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Lardo</div><div class="menu-item-desc">pomodoro, mozzarella, lardo</div></div>
+          <div class="menu-item-price">€ 7,50</div>
+          <div class="menu-item-price">€ 8,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Speck</div><div class="menu-item-desc">pomodoro, mozzarella, speck</div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price">€ 8,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Speck e Brie</div><div class="menu-item-desc">pomodoro, mozzarella, speck, brie</div></div>
+          <div class="menu-item-price">€ 9,00</div>
+          <div class="menu-item-price">€ 9,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Diavola</div><div class="menu-item-desc">pomodoro, mozzarella, salamino piccante</div></div>
+          <div class="menu-item-price">€ 7,00</div>
+          <div class="menu-item-price">€ 7,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Salsiccia</div><div class="menu-item-desc">pomodoro, mozzarella, salsiccia</div></div>
+          <div class="menu-item-price">€ 7,00</div>
+          <div class="menu-item-price">€ 7,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Salsiccia e Peperoni</div><div class="menu-item-desc">pomodoro, mozzarella, salsiccia, peperoni</div></div>
+          <div class="menu-item-price">€ 8,50</div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Tonno</div><div class="menu-item-desc">pomodoro, mozzarella, tonno</div></div>
+          <div class="menu-item-price">€ 6,50</div>
+          <div class="menu-item-price">€ 7,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Napoli</div><div class="menu-item-desc">pomodoro, mozzarella, acciughe</div></div>
+          <div class="menu-item-price">€ 7,50</div>
+          <div class="menu-item-price">€ 8,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Chips</div><div class="menu-item-desc">pomodoro, mozzarella, patatine fritte*</div></div>
+          <div class="menu-item-price">€ 7,00</div>
+          <div class="menu-item-price">€ 7,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Prosciutto e Funghi</div><div class="menu-item-desc">pomodoro, mozzarella, prosc. cotto, funghi</div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price">€ 8,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Wozzamericans</div><div class="menu-item-desc">pomodoro, mozzarella, wurstel, patatine fritte*</div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price">€ 8,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">4 Stagioni</div><div class="menu-item-desc">pomodoro, mozzarella, prosc. cotto, carciofini, funghi, olive</div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price">€ 8,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">4 Formaggi</div><div class="menu-item-desc">pomodoro, mozzarella, gorgonzola, fontina, <strong>stracchino</strong></div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price">€ 8,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Gorgo</div><div class="menu-item-desc">pomodoro, mozzarella, gorgonzola</div></div>
+          <div class="menu-item-price">€ 7,50</div>
+          <div class="menu-item-price">€ 8,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Gorgo e Noci</div><div class="menu-item-desc">mozzarella, gorgonzola, noci</div></div>
+          <div class="menu-item-price">€ 8,50</div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Gorgo e Cipolla</div><div class="menu-item-desc">pomodoro, mozzarella, gorgonzola, cipolle</div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price">€ 8,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Gorgo e Salamino</div><div class="menu-item-desc">pomodoro, mozzarella, gorgonzola, salamino piccante</div></div>
+          <div class="menu-item-price">€ 8,50</div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Gorgo e Salsiccia</div><div class="menu-item-desc">pomodoro, mozzarella, gorgonzola, salsiccia</div></div>
+          <div class="menu-item-price">€ 8,50</div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Valdostana</div><div class="menu-item-desc">pomodoro, mozzarella, prosc. cotto, fontina</div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price">€ 8,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Rucola</div><div class="menu-item-desc">pomodoro, mozzarella, rucola a fine cottura</div></div>
+          <div class="menu-item-price">€ 7,00</div>
+          <div class="menu-item-price">€ 7,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Capricciosa</div><div class="menu-item-desc">pomodoro, mozzarella, prosc. cotto, funghi, olive, carciofini, wurstel</div></div>
+          <div class="menu-item-price">€ 8,50</div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Italia</div><div class="menu-item-desc">mozzarella, pachino, rucola</div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price">€ 8,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Vegetariana</div><div class="menu-item-desc">pomodoro, mozzarella, melanzane, zucchine, peperoni</div></div>
+          <div class="menu-item-price">€ 9,00</div>
+          <div class="menu-item-price">€ 9,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Parmigiana</div><div class="menu-item-desc">pomodoro, mozzarella, melanzane, parmigiano, basilico</div></div>
+          <div class="menu-item-price">€ 8,50</div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Stracchino e Rucola</div><div class="menu-item-desc">mozzarella, stracchino, rucola</div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price">€ 8,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Calzone</div><div class="menu-item-desc">pomodoro, mozzarella, prosc. cotto</div></div>
+          <div class="menu-item-price">€ 8,00</div>
+          <div class="menu-item-price menu-item-price--muted">—</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       LE SPECIALI
+  ==================================================== -->
+  <section class="menu-section menu-section--bone" id="speciali">
+    <div class="container">
+      <div class="menu-section-header">
+        <span class="eyebrow">Le nostre creazioni</span>
+        <h2>Le Speciali</h2>
+        <p class="menu-section-desc">Le pizze con un carattere più deciso. Ingredienti selezionati, combinazioni studiate dal Mastro Fornaio Roberto.</p>
+      </div>
+
+      <div class="menu-prices-header">
+        <span></span>
+        <span>Tegamino</span>
+        <span>Mattone</span>
+      </div>
+
+      <div class="menu-items">
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Salsiccia e Friarielli</div><div class="menu-item-desc">pomodoro, mozzarella, salsiccia, friarielli</div></div>
+          <div class="menu-item-price">€ 8,50</div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">'Nduja e Scamorza</div><div class="menu-item-desc">pomodoro, mozzarella, 'nduja e scamorza</div></div>
+          <div class="menu-item-price">€ 9,00</div>
+          <div class="menu-item-price">€ 9,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">La Sarda</div><div class="menu-item-desc">pomodoro, mozzarella, salsiccia sarda, pecorino sardo</div></div>
+          <div class="menu-item-price">€ 9,50</div>
+          <div class="menu-item-price">€ 10,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">La Calabra</div><div class="menu-item-desc">pomodoro, mozzarella, spianata calabra, scamorza, peperoncino</div></div>
+          <div class="menu-item-price">€ 8,50</div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">La Carnivora</div><div class="menu-item-desc">pomodoro, mozzarella, salsiccia, scamorza, wurstel, bacon, prosc. cotto</div></div>
+          <div class="menu-item-price">€ 9,50</div>
+          <div class="menu-item-price">€ 10,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Tex-Mex</div><div class="menu-item-desc">pomodoro, fagioli, bacon, cipolla, peperoncino</div></div>
+          <div class="menu-item-price">€ 8,50</div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Panna e Salmone</div><div class="menu-item-desc">mozzarella, panna, salmone</div></div>
+          <div class="menu-item-price">€ 9,00</div>
+          <div class="menu-item-price">€ 9,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Taggiasca</div><div class="menu-item-desc">pomodoro, mozzarella, acciughe, capperi, olive taggiasche, basilico</div></div>
+          <div class="menu-item-price">€ 8,50</div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">La Snob</div><div class="menu-item-desc">mozzarella, prosc. cotto, zucchine, parmigiano</div></div>
+          <div class="menu-item-price">€ 9,00</div>
+          <div class="menu-item-price">€ 9,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual menu-item--featured">
+          <div>
+            <div class="menu-item-name">Pizza Brindo</div>
+            <div class="menu-item-desc">mozzarella + panna e salmone / zucchine, prosc. cotto, parmigiano / gorgonzola, noci / pachino, rucola, scaglie di grana</div>
+            <div class="menu-item-badges"><span class="tag">La nostra firma</span></div>
+          </div>
+          <div class="menu-item-price">€ 10,00</div>
+          <div class="menu-item-price">€ 11,00</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       LE FOCACCE
+  ==================================================== -->
+  <section class="menu-section menu-section--stone" id="focacce">
+    <div class="container">
+      <div class="menu-section-header">
+        <span class="eyebrow">Dal forno a legna</span>
+        <h2>Le Focacce</h2>
+        <p class="menu-section-desc">Impasto soffice, cottura nel forno a legna. Disponibili nelle versioni Tegamino e Mattone.</p>
+      </div>
+
+      <div class="menu-prices-header">
+        <span></span>
+        <span>Tegamino</span>
+        <span>Mattone</span>
+      </div>
+
+      <div class="menu-items">
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Bianca</div></div>
+          <div class="menu-item-price">€ 4,50</div>
+          <div class="menu-item-price">€ 5,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Al Lardo</div></div>
+          <div class="menu-item-price">€ 6,50</div>
+          <div class="menu-item-price">€ 7,00</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Allo Speck</div></div>
+          <div class="menu-item-price">€ 7,00</div>
+          <div class="menu-item-price">€ 7,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">Al Crudo</div></div>
+          <div class="menu-item-price">€ 7,00</div>
+          <div class="menu-item-price">€ 7,50</div>
+        </div>
+
+        <div class="menu-item menu-item--dual">
+          <div><div class="menu-item-name">La Nazionale</div><div class="menu-item-desc">pachino, bufala, rucola, scaglie di grana</div></div>
+          <div class="menu-item-price">€ 8,50</div>
+          <div class="menu-item-price">€ 10,00</div>
+        </div>
+
+      </div>
+
+      <div class="menu-pizza-note">
+        <p>Su tutte le nostre pizze è presente l'origano. La nostra mozzarella è solo Fiordilatte e tutti i nostri prodotti sono attentamente scelti e selezionati dall'esperienza pluriennale del nostro Mastro Fornaio <strong>Roberto</strong>.</p>
+        <small>*prodotto surgelato</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       PINSA ROMANA
+  ==================================================== -->
+  <section class="menu-section menu-section--bone" id="pinsa">
+    <div class="container">
+      <div class="menu-section-header">
+        <span class="eyebrow">Impasto leggero</span>
+        <h2>Pinsa Romana</h2>
+        <p class="menu-section-desc">Mix di farine a lunga lievitazione — crosta ariosa, leggerissima e digeribile. Sei numerate, sei storie diverse.</p>
+      </div>
+      <div class="menu-items">
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">0. La Brindessa</div>
+            <div class="menu-item-desc">pomodoro, mozzarella fior di latte, basilico</div>
+          </div>
+          <div class="menu-item-price text-muted">€ 11,00</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">1. La Piennola</div>
+            <div class="menu-item-desc">burrata, pomodori del Piennolo, acciughe, basilico</div>
+          </div>
+          <div class="menu-item-price text-muted">€ 14,00</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">2. La Norma</div>
+            <div class="menu-item-desc">pomodoro, melanzane, ricotta salata, basilico</div>
+          </div>
+          <div class="menu-item-price text-muted">€ 13,00</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">3. La Perfetta</div>
+            <div class="menu-item-desc">prosciutto crudo San Daniele, crema di stracchino, songino, scaglie di parmigiano Reggiano 49 mesi, aceto balsamico DOP</div>
+          </div>
+          <div class="menu-item-price text-muted">€ 18,00</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">4. La Maggica</div>
+            <div class="menu-item-desc">crema di pecorino romano, zabaione salato alla carbonara, guanciale croccante, pepe nero</div>
+          </div>
+          <div class="menu-item-price text-muted">€ 16,00</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">5. La Dotta</div>
+            <div class="menu-item-desc">pesto di pistacchi, mortadella di Bologna IGP, stracciatella, granella di pistacchio</div>
+          </div>
+          <div class="menu-item-price text-muted">€ 16,00</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       AMERICAN BBQ
+  ==================================================== -->
+  <section class="menu-section menu-section--dark" id="bbq">
+    <div class="container">
+      <div class="menu-section-header">
+        <span class="eyebrow eyebrow--gold">Brindo BBQ</span>
+        <h2>American BBQ</h2>
+        <p class="menu-section-desc">Filosofia "low and slow" — carne affumicata, pane cotto nel forno a legna, salse rigorosamente homemade. Disponibile anche da asporto.</p>
+      </div>
+      <div class="menu-forno-note">
+        <span class="menu-forno-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 18.657A8 8 0 0 1 4 12c0-2.5 1.5-5.5 4-7 0 4 1.5 6 3 6.5S14 10 14 10c1 2 0 4-1 5 2-1 3.5-4 3-7 3 2 4 5 1.657 10.657z"/></svg>
+        </span>
+        <p>Disponibile durante il periodo estivo.</p>
+      </div>
+
+      <!-- PANINI -->
+      <div class="menu-items">
+        <div class="menu-subgroup-title">Panini</div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Salsiccia</div>
+            <div class="menu-item-desc">Affumicata con legno di ciliegio, poi tuffata nella birra. Condimento: salsa BBQ homemade, cipolla rossa caramellata. Pane: bun ovale senza semi.</div>
+          </div>
+          <div class="menu-item-price">€ 8,00</div>
+        </div>
+
+        <div class="menu-item menu-item--featured">
+          <div>
+            <div class="menu-item-name">Pulled Pork</div>
+            <div class="menu-item-desc">Spalla di maiale speziata e affumicata, cotta lentamente a bassissima temperatura per almeno 14 ore. Condimento: coleslaw, salsa BBQ homemade. Pane: bun rotondo con semi.</div>
+            <div class="menu-item-badges"><span class="tag">Best seller</span></div>
+          </div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Brisket</div>
+            <div class="menu-item-desc">Punta di petto bovina, speziata e affumicata, poi cotta lentamente per almeno 20 ore. Condimento: salsa cheddar homemade. Pane: sandwich cotto in pentola.</div>
+          </div>
+          <div class="menu-item-price">€ 10,00</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Porchetta</div>
+            <div class="menu-item-desc">Conciata e cotta dalla P alla A da noi. Condimento: peperoni grigliati. Pane: panfocaccia.</div>
+          </div>
+          <div class="menu-item-price">€ 9,00</div>
+        </div>
+
+        <!-- SFIZIOBRINDO -->
+        <div class="menu-subgroup-title">Sfiziobrindo</div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Alette di pollo</div>
+            <div class="menu-item-desc">Cotte e affumicate al barbecue.</div>
+          </div>
+          <div class="menu-item-price">€ 7,00</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Nachos messicani</div>
+            <div class="menu-item-desc">Con salse homemade e jalapeños.</div>
+          </div>
+          <div class="menu-item-price">€ 4,00</div>
+        </div>
+
+      </div>
+
+      <!-- CREA IL TUO PANINO -->
+      <div class="menu-builder">
+
+        <div class="menu-builder-col">
+          <div class="menu-builder-col-title">Il Pane</div>
+          <div class="menu-builder-col-subtitle">tutti cotti al forno a legna</div>
+          <div class="menu-items">
+            <div class="menu-item"><div><div class="menu-item-name">BUN rotondo</div></div><div class="menu-item-price">€ 2,50</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Bun ovale senza semi</div></div><div class="menu-item-price">€ 2,50</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Pane sandwich cotto in pentola</div></div><div class="menu-item-price">€ 2,00</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Panfocaccia</div></div><div class="menu-item-price">€ 2,50</div></div>
+          </div>
+          <div class="menu-builder-col-title" style="margin-top: var(--space-8);">La Carne</div>
+          <div class="menu-builder-col-subtitle">low and slow — American Barbeque</div>
+          <div class="menu-items">
+            <div class="menu-item"><div><div class="menu-item-name">Salsiccia Affumicata</div></div><div class="menu-item-price">€ 4,00</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Pulled Pork</div></div><div class="menu-item-price">€ 5,00</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Brisket</div></div><div class="menu-item-price">€ 6,00</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Porchetta</div></div><div class="menu-item-price">€ 5,00</div></div>
+          </div>
+        </div>
+
+        <div class="menu-builder-col">
+          <div class="menu-builder-col-title">I Condimenti</div>
+          <div class="menu-builder-col-subtitle">preparati con cura da noi</div>
+          <div class="menu-items">
+            <div class="menu-item"><div><div class="menu-item-name">Cipolla Caramellata</div></div><div class="menu-item-price">€ 2,00</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Coleslaw</div></div><div class="menu-item-price">€ 2,00</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Peperoni Grigliati</div></div><div class="menu-item-price">€ 2,00</div></div>
+          </div>
+          <div class="menu-builder-col-title" style="margin-top: var(--space-8);">Le Salse</div>
+          <div class="menu-builder-col-subtitle">vigorosamente homemade</div>
+          <div class="menu-items">
+            <div class="menu-item"><div><div class="menu-item-name">Salsa BBQ</div></div><div class="menu-item-price">€ 1,00</div></div>
+            <div class="menu-item"><div><div class="menu-item-name">Salsa Cheddar</div></div><div class="menu-item-price">€ 1,50</div></div>
+          </div>
+        </div>
+
+        <div class="menu-builder-note">
+          <p>Sei fantasioso? Ci piaci. Crea il tuo panino Brindo BBQ — scegli il pane, la carne, il condimento e la salsa. Maggiorazione di <strong>€ 2,00</strong> se ordinato come piatto.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       DOLCI
+  ==================================================== -->
+  <section class="menu-section menu-section--bone" id="dolci">
+    <div class="container">
+      <div class="menu-section-header">
+        <span class="eyebrow">Dolci della casa</span>
+        <h2>Il finale.</h2>
+        <p class="menu-section-desc">Tutti preparati in casa. Alcuni escono ancora dal forno a legna.</p>
+      </div>
+      <div class="menu-forno-note">
+        <span class="menu-forno-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 18.657A8 8 0 0 1 4 12c0-2.5 1.5-5.5 4-7 0 4 1.5 6 3 6.5S14 10 14 10c1 2 0 4-1 5 2-1 3.5-4 3-7 3 2 4 5 1.657 10.657z"/></svg>
+        </span>
+        <p>La Panna cotta, il Crème caramel e il Bonet vengono cotti nel forno a legna.</p>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Pannacotta</div>
+            <div class="menu-item-desc">La facciamo semplice, come piace a noi. Cotta nel forno a legna, viene fuori con quella consistenza che non riesci a spiegare ma riconosci al primo cucchiaio. Grande varietà di topping — tu scegli, noi non giudichiamo.</div>
+            <div class="menu-item-badges"><span class="tag">Forno a legna</span></div>
+          </div>
+          <div class="menu-item-price">€ 6,00</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Tiramisù</div>
+            <div class="menu-item-desc">Niente scorciatoie. Caffè vero, mascarpone montato a mano, cacao che non risparmia. Lo prepariamo la mattina e finisce la sera — se arrivi tardi, può darsi che non ci sia più. Consideralo un motivo per prenotare prima.</div>
+          </div>
+          <div class="menu-item-price">€ 5,50</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Crème caramel</div>
+            <div class="menu-item-desc">Caramello che sa di caramello, crema che trema sul piatto come deve. Il forno a legna fa il resto — lento, paziente, senza fretta. Come dovrebbe essere sempre.</div>
+          </div>
+          <div class="menu-item-badges"><span class="tag">Forno a legna</span></div>
+          <div class="menu-item-price">€ 5,50</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Bonet</div>
+            <div class="menu-item-desc">
+Il dolce piemontese per eccellenza — cacao, amaretti, rum, uova. Una cosa seria. Lo cuociamo nel forno a legna. Se non l'hai mai assaggiato, stasera è la sera giusta.</div>
+            <div class="menu-item-badges"><span class="tag">Forno a legna</span></div>
+          </div>
+          <div class="menu-item-price">€ 6,00</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Altri dolci</div>
+            <div class="menu-item-desc">Meringata, sorbetti (di vari gusti), profitterol. Non prodotti da noi.</div>
+          </div>
+          <div class="menu-item-price">?</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       BEVANDE
+  ==================================================== -->
+  <section class="menu-section menu-section--stone" id="bevande">
+    <div class="container">
+      <div class="menu-section-header">
+        <span class="eyebrow">Da bere</span>
+        <h2>Bevande</h2>
+        <p class="menu-section-desc">Birre alla spina, in bottiglia, vino al calice e bibite.</p>
+      </div>
+      <div class="menu-items">
+
+        <div class="menu-subgroup-title">Birre alla spina</div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Bionda</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Rossa</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">IPA</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Special Brew</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Tucher Weisse</div></div>
+        </div>
+        <div class="menu-subgroup-title">Birre in bottiglia — Ichnusa</div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Ichnusa</div><div class="menu-item-desc">La classica.</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Ichnusa Non Filtrata</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Ichnusa Cruda</div></div>
+        </div>
+
+        <div class="menu-subgroup-title">Birre in bottiglia — Poretti</div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Poretti Analcolica</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Poretti Senza Glutine</div></div>
+        </div>
+
+        <div class="menu-subgroup-title">Vino al calice</div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Vino Bianco al calice</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Vino Rosso al calice</div></div>
+        </div>
+
+        <div class="menu-subgroup-title">Bibite in lattina</div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Coca-Cola</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Coca-Cola Zero</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Sprite</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Estathè alla Pesca</div></div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Estathè al Limone</div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="reservation-cta reservation-cta--dark">
+    <div class="container">
+      <span class="eyebrow eyebrow--gold">Tutto pronto</span>
+      <h2>Prenota il tuo tavolo.</h2>
+      <p>Il forno è già acceso. Manchi solo tu.</p>
+      <div class="reservation-actions">
+        <a href="prenota.html" class="btn-primary">Prenota online</a>
+        <a href="tel:+393427623961" class="btn-ghost-bone">342 762 3961</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid container">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="assets/brindo_logo.png" alt="Il Brindo Pizzeria" /></div>
+        <p class="footer-tagline">"Fuoco, farina, e qualche<br>sorpresa di troppo."</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/ilbrindo/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/ilbrindopizzeria/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g2531169-d10486386-Reviews-Il_Brindo_Pizzeria-Castelnuovo_Don_Bosco_Province_of_Asti_Piedmont.html" class="social-link" aria-label="TripAdvisor" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Esplora</p>
+        <ul class="footer-links">
+          <li><a href="menu.html">Menu completo</a></li>
+          <li><a href="menu.html#farinata">Farinata</a></li>
+          <li><a href="menu.html#pizze">Le Pizze</a></li>
+          <li><a href="menu.html#speciali">Le Speciali</a></li>
+          <li><a href="menu.html#pinsa">Pinsa Romana</a></li>
+          <li><a href="menu.html#bbq">American BBQ</a></li>
+          <li><a href="menu.html#dolci">Dolci della casa</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Info</p>
+        <div class="footer-info">
+          <p>
+            <strong>Il Brindo Pizzeria</strong><br>
+            Via dei Rivalba 2<br>
+            14022 Castelnuovo Don Bosco (AT)<br><br>
+            <strong>Tel.</strong> <a href="tel:+393427623961">342 762 3961</a>
+          </p>
+          <div class="footer-hours">
+            <div class="footer-hours-row"><span>Mar – Gio</span><span>Chiuso</span></div>
+            <div class="footer-hours-row"><span>Ven – Lun</span><span>18:30–22:00</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Prenota</p>
+        <ul class="footer-links">
+          <li><a href="prenota.html">Prenota un tavolo</a></li>
+          <li><a href="contatti.html">Contattaci</a></li>
+          <li><a href="chi-siamo.html">Chi siamo</a></li>
+        </ul>
+        <div class="footer-platforms">
+          <p class="footer-platforms-label">Trovaci su</p>
+          <a href="#">TheFork</a>
+          <a href="https://maps.google.com/?q=Via+dei+Rivalba+2,+Castelnuovo+Don+Bosco+AT" target="_blank" rel="noopener">Google Maps</a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g2531169-d10486386-Reviews-Il_Brindo_Pizzeria-Castelnuovo_Don_Bosco_Province_of_Asti_Piedmont.html" target="_blank" rel="noopener">TripAdvisor</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Il Brindo Pizzeria — Tutti i diritti riservati</span>
+      <span>Realizzato da IS Digital Agency</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav       = document.getElementById('main-nav');
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    const backdrop  = document.getElementById('nav-backdrop');
+
+    window.addEventListener('scroll', () =>
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60)
+    );
+    function openMenu() {
+      hamburger.classList.add('open'); navLinks.classList.add('open');
+      backdrop.classList.add('visible'); hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      hamburger.classList.remove('open'); navLinks.classList.remove('open');
+      backdrop.classList.remove('visible'); hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => hamburger.classList.contains('open') ? closeMenu() : openMenu());
+    backdrop.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+    // Sticky category nav active state
+    const sections = document.querySelectorAll('.menu-section[id]');
+    const catBtns  = document.querySelectorAll('.menu-cat-btn');
+    const catNav   = document.querySelector('.menu-cat-nav');
+
+    catBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        if (target) {
+          const offset = catNav.offsetHeight + 72;
+          const top    = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          catBtns.forEach(btn => btn.setAttribute('aria-selected', 'false'));
+          const active = document.querySelector(`.menu-cat-btn[data-target="${entry.target.id}"]`);
+          if (active) active.setAttribute('aria-selected', 'true');
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+
+    sections.forEach(s => sectionObserver.observe(s));
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer  = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px 120px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

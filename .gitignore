@@ -1,0 +1,15 @@
+# =============================================================
+# Secret files — never pushed to GitHub
+# =============================================================
+.env
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Node (if you ever add dependencies)
+node_modules/
