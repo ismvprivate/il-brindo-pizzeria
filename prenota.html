@@ -69,9 +69,9 @@
                   <input class="form-input" type="tel" id="telefono" name="telefono" placeholder="+39 333 000 0000" autocomplete="tel" required />
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="email">Email (opzionale)</label>
-                  <input class="form-input" type="email" id="email" name="email" placeholder="mario@email.it" autocomplete="email" />
-                  <p class="form-note">Se inserisci l'email riceverai la conferma automaticamente.</p>
+                  <label class="form-label" for="email">Email</label>
+                  <input class="form-input" type="email" id="email" name="email" placeholder="mario@email.it" autocomplete="email" required />
+                  <p class="form-note">Riceverai la conferma della prenotazione via email.</p>
                 </div>
               </div>
 
@@ -395,6 +395,7 @@
 
       if (!nome || !cognome) return showError(formTavolo, 'Inserisci nome e cognome.');
       if (!telefono)         return showError(formTavolo, 'Inserisci un numero di telefono.');
+      if (!email)            return showError(formTavolo, 'Inserisci un indirizzo email.');
       if (!data)             return showError(formTavolo, 'Scegli una data.');
       if (!orario)           return showError(formTavolo, 'Scegli un orario.');
       if (!coperti)          return showError(formTavolo, 'Indica il numero di persone.');
