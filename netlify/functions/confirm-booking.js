@@ -3,10 +3,11 @@
 // Set these in Netlify: Site Settings > Environment Variables.
 // For local testing, create a .env file (see .env.example).
 // ============================================================
-const RESTAURANT_NAME     = "Il Brindo Pizzeria";
-const EMAILJS_SERVICE_ID  = process.env.EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_CONFIRM;
-const EMAILJS_PUBLIC_KEY  = process.env.EMAILJS_PUBLIC_KEY;
+const RESTAURANT_NAME      = "Il Brindo Pizzeria";
+const EMAILJS_SERVICE_ID   = process.env.EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID  = process.env.EMAILJS_TEMPLATE_CONFIRM;
+const EMAILJS_PUBLIC_KEY   = process.env.EMAILJS_PUBLIC_KEY;
+const EMAILJS_PRIVATE_KEY  = process.env.EMAILJS_PRIVATE_KEY;
 // ============================================================
 
 exports.handler = async (event) => {
@@ -35,14 +36,15 @@ exports.handler = async (event) => {
   let emailError = null;
 
   if (email) {
-    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY || !EMAILJS_PRIVATE_KEY) {
       emailError = "Variabili EmailJS non configurate in Netlify.";
-      console.error("EmailJS env vars missing:", { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY });
+      console.error("EmailJS env vars missing:", { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY, EMAILJS_PRIVATE_KEY: !!EMAILJS_PRIVATE_KEY });
     } else {
       const emailPayload = {
-        service_id:  EMAILJS_SERVICE_ID,
-        template_id: EMAILJS_TEMPLATE_ID,
-        user_id:     EMAILJS_PUBLIC_KEY,
+        service_id:   EMAILJS_SERVICE_ID,
+        template_id:  EMAILJS_TEMPLATE_ID,
+        user_id:      EMAILJS_PUBLIC_KEY,
+        accessToken:  EMAILJS_PRIVATE_KEY,
         template_params: {
           to_email:        email,
           to_name:         name,
