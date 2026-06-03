@@ -251,11 +251,13 @@
       nav.classList.toggle('nav--scrolled', window.scrollY > 60)
     );
     function openMenu() {
+      nav.classList.add('menu-open');
       hamburger.classList.add('open'); navLinks.classList.add('open');
       backdrop.classList.add('visible'); hamburger.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
     }
     function closeMenu() {
+      nav.classList.remove('menu-open');
       hamburger.classList.remove('open'); navLinks.classList.remove('open');
       backdrop.classList.remove('visible'); hamburger.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';

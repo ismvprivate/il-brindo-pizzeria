@@ -614,6 +614,12 @@ small {
   -webkit-backdrop-filter: blur(12px);
 }
 
+#main-nav.menu-open {
+  background: rgba(30, 28, 26, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
 /* Logo */
 .nav-logo {
   display: flex;
@@ -703,7 +709,7 @@ small {
 .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* Backdrop overlay (mobile menu) */
+/* Backdrop overlay (mobile menu — now superseded by full-screen nav-links panel) */
 .nav-backdrop {
   display: none;
   position: fixed;
@@ -733,45 +739,51 @@ small {
 
   .nav-links {
     flex-direction: column;
-    align-items: stretch;
-    gap: 0;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
     position: fixed;
-    top: 0;
+    top: 64px;
+    left: 0;
     right: 0;
-    width: min(280px, 80vw);
-    height: 100%;
-    background: rgba(20, 17, 14, 0.98);
+    bottom: 0;
+    width: 100%;
+    background: rgba(20, 17, 14, 0.97);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    padding: 88px var(--space-8) var(--space-12);
-    transform: translateX(100%);
-    transition: transform var(--ease-spring);
+    padding: var(--space-8) var(--space-6) var(--space-12);
+    transform: translateY(-100%);
+    transition: transform var(--ease-spring), opacity var(--ease-spring);
+    opacity: 0;
     z-index: 102;
-    border-left: 1px solid var(--color-border-dark);
   }
 
-  .nav-links.open { transform: translateX(0); }
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
 
   .nav-links li {
-    border-bottom: 1px solid rgba(245, 240, 232, 0.07);
+    width: 100%;
+    text-align: center;
   }
 
   .nav-links li:last-child {
-    border-bottom: none;
-    margin-top: var(--space-6);
+    margin-top: var(--space-4);
   }
 
   .nav-links a {
     display: block;
     padding-block: var(--space-4);
-    font-size: 15px;
-    color: rgba(245, 240, 232, 0.8);
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    color: rgba(245, 240, 232, 0.85);
   }
 
   .nav-links .nav-cta {
-    display: block;
+    display: inline-block;
     text-align: center;
-    padding: 14px 0;
+    padding: 14px var(--space-10);
     background: var(--color-accent);
     border-radius: var(--radius-sm);
     color: var(--color-bone);
