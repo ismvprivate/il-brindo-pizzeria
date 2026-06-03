@@ -31,39 +31,58 @@ exports.handler = async (event) => {
   const guestsNum   = parseInt(guests, 10);
 
   // If customer provided an email, send a confirmation via EmailJS REST API
-  if (email) {
-    const emailPayload = {
-      service_id:  EMAILJS_SERVICE_ID,
-      template_id: EMAILJS_TEMPLATE_ID,
-      user_id:     EMAILJS_PUBLIC_KEY,
-      template_params: {
-        to_email:        email,
-        to_name:         name,
-        restaurant_name: RESTAURANT_NAME,
-        date:            italianDate,
-        time_slot:       time_slot,
-        guests:          String(guestsNum),
-        phone:           phone,
-      },
-    };
+  let emailSent = false;
+  let emailError = null;
 
-    try {
-      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method:  "POST",
-        headers: { "Content-Type": "application/json" },
-        body:    JSON.stringify(emailPayload),
-      });
-      if (!res.ok) {
-        console.error("EmailJS confirm error:", await res.text());
+  if (email) {
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      emailError = "Variabili EmailJS non configurate in Netlify.";
+      console.error("EmailJS env vars missing:", { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY });
+    } else {
+      const emailPayload = {
+        service_id:  EMAILJS_SERVICE_ID,
+        template_id: EMAILJS_TEMPLATE_ID,
+        user_id:     EMAILJS_PUBLIC_KEY,
+        template_params: {
+          to_email:        email,
+          to_name:         name,
+          restaurant_name: RESTAURANT_NAME,
+          date:            italianDate,
+          time_slot:       time_slot,
+          guests:          String(guestsNum),
+          phone:           phone,
+        },
+      };
+
+      try {
+        const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+          method:  "POST",
+          headers: { "Content-Type": "application/json" },
+          body:    JSON.stringify(emailPayload),
+        });
+        if (res.ok) {
+          emailSent = true;
+        } else {
+          const errText = await res.text();
+          emailError = `EmailJS errore ${res.status}: ${errText}`;
+          console.error("EmailJS confirm error:", errText);
+        }
+      } catch (err) {
+        emailError = `Errore di rete: ${err.message}`;
+        console.error("EmailJS fetch error:", err);
       }
-    } catch (err) {
-      console.error("EmailJS fetch error:", err);
     }
   }
 
+  const emailStatusHtml = email
+    ? (emailSent
+        ? "<br><br>✅ Email di conferma inviata al cliente."
+        : `<br><br>⚠️ Email NON inviata al cliente. Errore: ${escHtml(emailError || "sconosciuto")}. Contattalo al ${escHtml(phone)}.`)
+    : "";
+
   return htmlPage(
     "Prenotazione confermata ✅",
-    `Hai confermato la prenotazione di <strong>${escHtml(name)}</strong> per <strong>${guestsNum} person${guestsNum === 1 ? "a" : "e"}</strong> il <strong>${escHtml(italianDate)}</strong> alle <strong>${escHtml(time_slot)}</strong>.${email ? "<br><br>Una email di conferma è stata inviata al cliente." : ""}`
+    `Hai confermato la prenotazione di <strong>${escHtml(name)}</strong> per <strong>${guestsNum} person${guestsNum === 1 ? "a" : "e"}</strong> il <strong>${escHtml(italianDate)}</strong> alle <strong>${escHtml(time_slot)}</strong>.${emailStatusHtml}`
   );
 };
 

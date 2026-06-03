@@ -31,40 +31,59 @@ exports.handler = async (event) => {
   const guestsNum   = parseInt(guests, 10);
 
   // If customer provided an email, send a polite rejection via EmailJS REST API
-  if (email) {
-    const emailPayload = {
-      service_id:  EMAILJS_SERVICE_ID,
-      template_id: EMAILJS_TEMPLATE_ID,
-      user_id:     EMAILJS_PUBLIC_KEY,
-      template_params: {
-        to_email:         email,
-        to_name:          name,
-        restaurant_name:  RESTAURANT_NAME,
-        restaurant_phone: RESTAURANT_PHONE,
-        date:             italianDate,
-        time_slot:        time_slot,
-        guests:           String(guestsNum),
-        phone:            phone,
-      },
-    };
+  let emailSent = false;
+  let emailError = null;
 
-    try {
-      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method:  "POST",
-        headers: { "Content-Type": "application/json" },
-        body:    JSON.stringify(emailPayload),
-      });
-      if (!res.ok) {
-        console.error("EmailJS reject error:", await res.text());
+  if (email) {
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      emailError = "Variabili EmailJS non configurate in Netlify.";
+      console.error("EmailJS env vars missing:", { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY });
+    } else {
+      const emailPayload = {
+        service_id:  EMAILJS_SERVICE_ID,
+        template_id: EMAILJS_TEMPLATE_ID,
+        user_id:     EMAILJS_PUBLIC_KEY,
+        template_params: {
+          to_email:         email,
+          to_name:          name,
+          restaurant_name:  RESTAURANT_NAME,
+          restaurant_phone: RESTAURANT_PHONE,
+          date:             italianDate,
+          time_slot:        time_slot,
+          guests:           String(guestsNum),
+          phone:            phone,
+        },
+      };
+
+      try {
+        const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+          method:  "POST",
+          headers: { "Content-Type": "application/json" },
+          body:    JSON.stringify(emailPayload),
+        });
+        if (res.ok) {
+          emailSent = true;
+        } else {
+          const errText = await res.text();
+          emailError = `EmailJS errore ${res.status}: ${errText}`;
+          console.error("EmailJS reject error:", errText);
+        }
+      } catch (err) {
+        emailError = `Errore di rete: ${err.message}`;
+        console.error("EmailJS fetch error:", err);
       }
-    } catch (err) {
-      console.error("EmailJS fetch error:", err);
     }
   }
 
+  const emailStatusHtml = email
+    ? (emailSent
+        ? "<br><br>✅ Email di comunicazione inviata al cliente."
+        : `<br><br>⚠️ Email NON inviata al cliente. Errore: ${escHtml(emailError || "sconosciuto")}. Contattalo al ${escHtml(phone)}.`)
+    : `<br><br><strong>Nota:</strong> il cliente non ha fornito un'email — contattalo telefonicamente al ${escHtml(phone)} se necessario.`;
+
   return htmlPage(
     "Prenotazione rifiutata ❌",
-    `Hai rifiutato la prenotazione di <strong>${escHtml(name)}</strong> per il <strong>${escHtml(italianDate)}</strong> alle <strong>${escHtml(time_slot)}</strong>.${email ? "<br><br>Una email di comunicazione è stata inviata al cliente." : `<br><br><strong>Nota:</strong> il cliente non ha fornito un'email — contattalo telefonicamente al ${escHtml(phone)} se necessario.`}`
+    `Hai rifiutato la prenotazione di <strong>${escHtml(name)}</strong> per il <strong>${escHtml(italianDate)}</strong> alle <strong>${escHtml(time_slot)}</strong>.${emailStatusHtml}`
   );
 };
 

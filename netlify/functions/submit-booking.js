@@ -71,14 +71,16 @@ exports.handler = async (event) => {
   // --- Build WhatsApp message ---
   let waMessage;
   const bookingLine = `🍕 Nuova prenotazione! ${name} — ${guestsNum} person${guestsNum === 1 ? "a" : "e"} — ${italianDate} ${time_slot}. Tel: ${phone}`;
+  const notesLine   = notes ? `📝 Note: ${notes}` : null;
   const confirmLine = `✅ Conferma: ${confirmUrl}`;
   const rejectLine  = `❌ Rifiuta: ${rejectUrl}`;
 
-  if (isLargeGroup) {
-    waMessage = `⚠️ GRUPPO GRANDE — CHIAMA PRIMA DI CONFERMARE\n${bookingLine}\n${confirmLine}\n${rejectLine}`;
-  } else {
-    waMessage = `${bookingLine}\n${confirmLine}\n${rejectLine}`;
-  }
+  const messageParts = isLargeGroup
+    ? [`⚠️ GRUPPO GRANDE — CHIAMA PRIMA DI CONFERMARE`, bookingLine]
+    : [bookingLine];
+  if (notesLine) messageParts.push(notesLine);
+  messageParts.push(confirmLine, rejectLine);
+  waMessage = messageParts.join("\n");
 
   // --- Send WhatsApp via Callmebot ---
   const encodedMsg = encodeURIComponent(waMessage);

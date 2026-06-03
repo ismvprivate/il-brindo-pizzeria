@@ -598,7 +598,7 @@ small {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
+  z-index: 103;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2113,6 +2113,9 @@ footer {
 input[type="date"].form-input {
   appearance: auto;
   -webkit-appearance: auto;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .form-input::placeholder,
@@ -2248,7 +2251,13 @@ input[type="date"].form-input {
     font-size: 16px;
     padding: 14px var(--space-4);
     min-height: 48px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
+  input[type="date"].form-input {
+    width: 100%;
+  }
+  .prenota-form-card { overflow: hidden; }
 }
 
 @media (max-width: 375px) {
