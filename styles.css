@@ -738,24 +738,29 @@ small {
   .nav-backdrop { display: block; }
 
   .nav-links {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: var(--space-2);
+    list-style: none;
     position: fixed;
     top: 64px;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: var(--space-8) var(--space-6) var(--space-12);
     background: rgba(20, 17, 14, 0.97);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    padding: var(--space-8) var(--space-6) var(--space-12);
     transform: translateY(-100%);
     transition: transform var(--ease-spring), opacity var(--ease-spring);
     opacity: 0;
     z-index: 102;
+    box-sizing: border-box;
   }
 
   .nav-links.open {
@@ -2090,9 +2095,15 @@ footer {
   grid-template-columns: 1fr 1fr;
   gap: var(--space-4);
   margin-bottom: var(--space-5);
+  min-width: 0;
 }
 
-.form-group { margin-bottom: var(--space-5); }
+.form-group {
+  margin-bottom: var(--space-5);
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
 
 .form-label {
   display: block;
@@ -2125,9 +2136,10 @@ footer {
 input[type="date"].form-input {
   appearance: auto;
   -webkit-appearance: auto;
-  box-sizing: border-box;
+  width: 100%;
   max-width: 100%;
   min-width: 0;
+  box-sizing: border-box;
 }
 
 .form-input::placeholder,
