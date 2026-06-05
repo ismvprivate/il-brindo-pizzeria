@@ -5,11 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu — Il Brindo Pizzeria</title>
   <meta name="description" content="Il menu completo di Il Brindo Pizzeria: Farinata, Le Pizze, Le Speciali, Le Focacce, American BBQ, Dolci e Bevande." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Il Brindo Pizzeria" />
+  <meta property="og:title" content="Menu — Il Brindo Pizzeria" />
+  <meta property="og:description" content="Il menu completo di Il Brindo Pizzeria: Farinata, Le Pizze, Le Speciali, Le Focacce, American BBQ, Dolci e Bevande." />
+  <meta property="og:url" content="https://ilbrindopizzeria.netlify.app/menu.html" />
+  <meta property="og:image" content="https://ilbrindopizzeria.netlify.app/assets/hero-forno.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="it_IT" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/brindo_logo.png" type="image/png" />
+  <style>
+    .bbq-manifesto {
+      margin-top: var(--space-6, 1.5rem);
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .bbq-manifesto p {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(14px, 1.8vw, 17px);
+      line-height: 1.85;
+      color: rgba(245, 240, 232, 0.78);
+      margin-bottom: 1.2em;
+    }
+    .bbq-manifesto-lead {
+      font-size: clamp(16px, 2.2vw, 20px) !important;
+      color: rgba(245, 240, 232, 0.92) !important;
+    }
+    .bbq-manifesto-lead em {
+      color: var(--color-ember, #C8531A);
+      font-style: italic;
+    }
+    .bbq-manifesto-promise {
+      color: rgba(245, 240, 232, 0.92) !important;
+    }
+    .bbq-manifesto-promise strong {
+      color: var(--color-gold, #D4A24C);
+      font-style: normal;
+    }
+    .bbq-manifesto-family {
+      font-size: clamp(13px, 1.6vw, 15px) !important;
+      color: rgba(245, 240, 232, 0.55) !important;
+      margin-bottom: 1.6em !important;
+    }
+    .bbq-manifesto-claim {
+      display: block;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: clamp(15px, 2.4vw, 22px);
+      color: var(--color-gold, #D4A24C);
+      letter-spacing: 0.01em;
+      margin-top: 0.4em;
+    }
+  </style>
 </head>
 <body>
 
@@ -568,13 +624,21 @@
       <div class="menu-section-header">
         <span class="eyebrow eyebrow--gold">Brindo BBQ</span>
         <h2>American BBQ</h2>
-        <p class="menu-section-desc">Filosofia "low and slow" — carne affumicata, pane cotto nel forno a legna, salse rigorosamente homemade. Disponibile anche da asporto.</p>
+        <div class="bbq-manifesto">
+          <p class="bbq-manifesto-lead">La cottura della carne secondo la filosofia dell'American BBQ si potrebbe vedere quasi come un <em>corteggiamento</em>.</p>
+          <p>Dev'essere Calda il giusto, Costante, Avvolgente. Non può essere rapida e pretenziosa di risultati immediati — ci vuole Pazienza, Passione, Venerazione e Dedizione. Speziata, ma non opprimente. Alle volte in sordina, altre con azione diretta.</p>
+          <p>Non segue ritmi frenetici quando si abbandona ai fumi di legni pregiati e si colma di buono nell'attesa del punto di cottura perfetto.</p>
+          <p>Come il corteggiamento, l'American BBQ ha origini antichissime. C'è chi lo sa fare e chi finge. C'è chi sa come andrà a finire e chi mente: proprio quando pensi di aver portato a termine il tuo amoreggiamento — è poi in realtà lui che conquista te.</p>
+          <p class="bbq-manifesto-promise">L'American BBQ non ha fretta di farti innamorare.<br>Ma, te lo promettiamo: <strong>basterà il primo assaggio.</strong></p>
+          <p class="bbq-manifesto-family">Perché il barbecue è un rituale che riunisce le persone, celebra la condivisione, la convivialità. Fa famiglia. E voi, in un certo senso, siete la nostra.</p>
+          <span class="bbq-manifesto-claim">Nel dubbio, American Barbecue&hellip; quello vero però.</span>
+        </div>
       </div>
       <div class="menu-forno-note">
         <span class="menu-forno-icon" aria-hidden="true">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 18.657A8 8 0 0 1 4 12c0-2.5 1.5-5.5 4-7 0 4 1.5 6 3 6.5S14 10 14 10c1 2 0 4-1 5 2-1 3.5-4 3-7 3 2 4 5 1.657 10.657z"/></svg>
         </span>
-        <p>Disponibile durante il periodo estivo.</p>
+        <p>Disponibile durante il periodo estivo. Pane cotto nel forno a legna, salse rigorosamente homemade.</p>
       </div>
 
       <!-- PANINI -->
@@ -858,6 +922,7 @@ Il dolce piemontese per eccellenza — cacao, amaretti, rum, uova. Una cosa seri
           <li><a href="menu.html#pinsa">Pinsa Romana</a></li>
           <li><a href="menu.html#bbq">American BBQ</a></li>
           <li><a href="menu.html#dolci">Dolci della casa</a></li>
+          <li><a href="chi-siamo.html#manifesto">Perché bRinDo?</a></li>
         </ul>
       </div>
       <div>

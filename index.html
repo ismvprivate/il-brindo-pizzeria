@@ -5,11 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Il Brindo Pizzeria — Castelnuovo Don Bosco</title>
   <meta name="description" content="La migliore farinata e la pizza al forno a legna a Castelnuovo Don Bosco. Pizza al Mattone, Tegamino, Pinsa Romana, American BBQ e Dolci della casa." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:site_name" content="Il Brindo Pizzeria" />
+  <meta property="og:title" content="Il Brindo Pizzeria — Castelnuovo Don Bosco" />
+  <meta property="og:description" content="La migliore farinata e la pizza al forno a legna a Castelnuovo Don Bosco. Pizza al Mattone, Tegamino, Pinsa Romana, American BBQ e Dolci della casa." />
+  <meta property="og:url" content="https://ilbrindopizzeria.netlify.app/" />
+  <meta property="og:image" content="https://ilbrindopizzeria.netlify.app/assets/hero-forno.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="it_IT" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/brindo_logo.png" type="image/png" />
+  <style>
+    .perche-teaser {
+      background-color: var(--color-charcoal-deep, #111009);
+      padding: var(--space-16, 4rem) 0;
+    }
+    .perche-teaser-card {
+      display: block;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      text-decoration: none;
+      padding: var(--space-12, 3rem) var(--space-8, 2rem);
+      border: 1px solid rgba(212, 162, 76, 0.18);
+      border-radius: 4px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(200, 83, 26, 0.08) 0%, transparent 70%);
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+    .perche-teaser-card:hover {
+      border-color: rgba(212, 162, 76, 0.42);
+      background: radial-gradient(ellipse at 50% 0%, rgba(200, 83, 26, 0.14) 0%, transparent 70%);
+    }
+    .perche-teaser-card:active {
+      border-color: rgba(212, 162, 76, 0.6);
+    }
+    .perche-teaser-eyebrow {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-ember, #C8531A);
+      margin-bottom: 1.4rem;
+    }
+    .perche-teaser-quote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(18px, 2.8vw, 26px);
+      line-height: 1.65;
+      color: var(--color-bone, #F5F0E8);
+      margin: 0 0 1.6rem;
+      padding: 0;
+      border: none;
+    }
+    .perche-teaser-cta {
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--color-gold, #D4A24C);
+      transition: letter-spacing 0.25s ease;
+    }
+    .perche-teaser-card:hover .perche-teaser-cta {
+      letter-spacing: 0.08em;
+    }
+  </style>
 </head>
 <body>
 
@@ -69,6 +135,19 @@
   </section>
 
   <!-- ====================================================
+       PERCHÉ BRINDO TEASER
+  ==================================================== -->
+  <section class="perche-teaser">
+    <div class="container">
+      <a href="chi-siamo.html#manifesto" class="perche-teaser-card reveal">
+        <span class="perche-teaser-eyebrow">Perché bRinDo?</span>
+        <blockquote class="perche-teaser-quote">L'American BBQ non ha fretta di farti innamorare.<br>Ma, te lo promettiamo: basterà il primo assaggio.</blockquote>
+        <span class="perche-teaser-cta">Leggi il manifesto →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ====================================================
        SIGNATURE OFFERINGS
   ==================================================== -->
   <section class="offerings">
@@ -110,7 +189,7 @@
           <div class="offering-card-body">
             <span class="tag">Il nostro orgoglio</span>
             <h3 class="offering-card-title">Farinata</h3>
-            <p class="offering-card-desc">Croccante ai bordi, morbida al centro, profumata di rosmarino. Cotta direttamente nel forno a legna su teglia di rame. La migliore nell'arco di chilometri — lo diciamo noi, ma te lo confermano gli altri.</p>
+            <p class="offering-card-desc">Croccante ai bordi, morbida al centro, profumata di rosmarino. Cotta direttamente nel forno a legna su teglia di rame. La migliore nell'arco di chilometri — lo diciamo noi, ma te lo confermano i nostri bRinDamici.</p>
             <a href="menu.html#farinata" class="offering-card-link">Vedi la farinata →</a>
           </div>
         </article>
@@ -253,6 +332,7 @@
           <li><a href="menu.html#pinsa">Pinsa Romana</a></li>
           <li><a href="menu.html#bbq">American BBQ</a></li>
           <li><a href="menu.html#dolci">Dolci della casa</a></li>
+          <li><a href="chi-siamo.html#manifesto">Perché bRinDo?</a></li>
         </ul>
       </div>
 
@@ -297,6 +377,49 @@
       <span>Realizzato da IS Digital Agency</span>
     </div>
   </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Il Brindo Pizzeria",
+    "image": "https://ilbrindopizzeria.netlify.app/assets/hero-forno.png",
+    "url": "https://ilbrindopizzeria.netlify.app/",
+    "telephone": "+393427623961",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via dei Rivalba 2",
+      "addressLocality": "Castelnuovo Don Bosco",
+      "addressRegion": "AT",
+      "postalCode": "14022",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.9978,
+      "longitude": 8.0207
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday", "Saturday", "Sunday", "Monday"],
+        "opens": "18:30",
+        "closes": "22:00"
+      }
+    ],
+    "servesCuisine": ["Pizza", "Farinata", "American BBQ", "Italiana"],
+    "priceRange": "€€",
+    "menu": "https://ilbrindopizzeria.netlify.app/menu.html",
+    "acceptsReservations": "true",
+    "sameAs": [
+      "https://www.instagram.com/ilbrindo/",
+      "https://www.facebook.com/ilbrindopizzeria/",
+      "https://www.tripadvisor.com/Restaurant_Review-g2531169-d10486386-Reviews-Il_Brindo_Pizzeria-Castelnuovo_Don_Bosco_Province_of_Asti_Piedmont.html"
+    ],
+    "foundingDate": "2016",
+    "description": "La migliore farinata e la pizza al forno a legna a Castelnuovo Don Bosco. Pizza al Mattone, Tegamino, Pinsa Romana, American BBQ e Dolci della casa."
+  }
+  </script>
 
   <script>
     // Navbar scroll
