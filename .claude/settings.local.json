@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/js\")",
+      "Bash(mkdir -p \"c:/Users/Ismaele/.claude/projects/c--Users-Ismaele-Desktop-Il-brindo-pizzeria--website/memory\")",
+      "WebSearch",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-pannacotta.jpg\" \"https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-creme-caramel.jpg\" \"https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-bonet.jpg\" \"https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/pizza-mattone.jpg\" \"https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/pinsa-romana.jpg\" \"https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/about-sala.jpg\" \"https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/about-team.jpg\" \"https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/about-ingredienti.jpg\" \"https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=1200&q=85\")",
+      "Bash(wait)",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-creme-caramel.jpg\" \"https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-bonet.jpg\" \"https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/about-ingredienti.jpg\" \"https://images.unsplash.com/photo-1498579150354-977475b7ea0b?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-creme-caramel.jpg\" \"https://images.unsplash.com/photo-1551024506-0bccd828d307?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-creme-caramel.jpg\" \"https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-creme-caramel.jpg\" \"https://images.pexels.com/photos/6011/food-caramel-flan-cream.jpg?auto=compress&cs=tinysrgb&w=1200\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-creme-caramel.jpg\" \"https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=1200\")",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-creme-caramel.jpg\" \"https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1200&q=85\")",
+      "Bash(curl -k -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-creme-caramel.jpg\" \"https://unsplash.com/photos/0h5Qfg0OWFo/download?w=1200\")",
+      "Bash(curl -k -s -L -o \"c:/Users/Ismaele/Desktop/Il brindo pizzeria -website/assets/dolci-creme-caramel.jpg\" \"https://unsplash.com/photos/TqPdzQ00I0U/download?w=1200\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Ismaele\\Desktop\\Il brindo pizzeria -website",
+      "c:\\Users\\Ismaele\\.claude\\projects\\c--Users-Ismaele-Desktop-Il-brindo-pizzeria--website"
+    ]
+  }
+}
